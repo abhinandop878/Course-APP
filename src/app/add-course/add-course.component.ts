@@ -27,6 +27,11 @@ export class AddCourseComponent implements OnInit {
     this.myapi.addCourse(data).subscribe((response)=>{
       console.log(response)
       alert("Successfully added")
+      this.courseTitle=""
+      this.courseDescription=""
+      this.courseDuration=""
+      this.courseDate=""
+      this.courseVenue=""
     })
   }
   ngOnInit(): void {
