@@ -11,10 +11,11 @@ export class ViewAllComponent implements OnInit {
   constructor(private myapi:ApiService) {
     this.fetchData()
    }
-
+  status:boolean=false 
   fetchData=()=>{
     this.myapi.viewAll().subscribe((data)=>{
       this.courseData=data
+      this.status=true
     })
   }
   courseData:any=[]
